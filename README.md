@@ -28,6 +28,12 @@ BASE_URL=http://localhost:3000/
 npm start
 ```
 
+## Running Swagger API Documentation
+
+```
+http://localhost:3000/api-docs/
+```
+
 ## API Endpoints
 
 ### Authentication
