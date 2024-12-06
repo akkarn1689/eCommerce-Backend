@@ -1,13 +1,6 @@
 
 # E-Commerce Backend
 
-Welcome to the E-Commerce Backend, an advanced server-side application that provides a robust foundation for building a comprehensive e-commerce platform. This backend system is designed to facilitate seamless online shopping experiences, from product browsing to checkout and order fulfillment.
-
-
-## Project Overview
-
-Our e-commerce backend is a Node.js application that leverages Express.js for creating a structured, scalable, and efficient RESTful API. The system is backed by MongoDB, a NoSQL database, to ensure high performance and flexible data handling for e-commerce operations.
-
 ## Features
 
 - **User Authentication and Authorization:** Secure sign-up and sign-in processes with role-based access control, allowing for clear distinction between customer and administrator privileges.
