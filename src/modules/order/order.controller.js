@@ -7,7 +7,7 @@ import { orderModel } from "../../../Database/models/order.model.js";
 import Stripe from "stripe";
 import { userModel } from "../../../Database/models/user.model.js";
 const stripe = new Stripe(
-  "sk_test_51NV8e0HVbfRYk4SfG3Ul84cabreiXkPbW1xMugwqvU9is2Z2ICEafTtG6NHLIUdFVIjkiRHYmAPKxCLsCpoU2NnN00LVpHcixz"
+  process.env.STRIPE_SECRET_KEY,
 );
 
 const createCashOrder = catchAsyncError(async (req, res, next) => {
@@ -88,8 +88,8 @@ const createCheckOutSession = catchAsyncError(async (req, res, next) => {
       },
     ],
     mode: "payment",
-    success_url: "https://github.com/AbdeIkader",
-    cancel_url: "https://www.linkedin.com/in/abdelrahman-abdelkader-259781215/",
+    success_url: "",
+    cancel_url: "",
     customer_email: req.user.email,
     client_reference_id: req.params.id,
     metadata: req.body.shippingAddress,
@@ -107,7 +107,7 @@ const createOnlineOrder = catchAsyncError(async (request, response) => {
     event = stripe.webhooks.constructEvent(
       request.body,
       sig,
-      "whsec_fcatGuOKvXYUQoz5NWSwH9vaqdWXIWsI"
+      ""
     );
   } catch (err) {
     return response.status(400).send(`Webhook Error: ${err.message}`);
@@ -124,7 +124,6 @@ const createOnlineOrder = catchAsyncError(async (request, response) => {
   }
 });
 
-//https://ecommerce-backend-codv.onrender.com/api/v1/orders/checkOut/6536c48750fab46f309bb950
 
 
 async function card (e,res){
