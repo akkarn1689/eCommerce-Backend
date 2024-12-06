@@ -7,8 +7,7 @@ import { reviewModel } from "./../../../Database/models/review.model.js";
 const addReview = catchAsyncError(async (req, res, next) => {
   req.body.userId = req.user._id;
   let isReviewed = await reviewModel.findOne({
-    userId: req.user._id, //fe 7etet en el product law 8ayrt el id bta3oh le ay product tany
-    //me4 mawgood hay4ta8l bardo w da me4 sa7
+    userId: req.user._id,
     productId: req.body.productId,
   });
   if (isReviewed) return next(new AppError("You created a review before", 409));
