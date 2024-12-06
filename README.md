@@ -21,27 +21,11 @@ Our e-commerce backend is a Node.js application that leverages Express.js for cr
 - **Scalable Architecture:** Designed with best practices in mind, ensuring that the backend can scale with the growing needs of the business.
 
 
-## Prerequisites
-
-- Node.js (v18.12.0 or higher)
-- MongoDB (Running on the default port)
-- npm (for dependency management)
-
-## Installation
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/AbdeIkader/eCommerce-Backend.git
-cd eCommerce-Backend
-npm install
-```
-
 Set up your environment variables in a `.env` file:
 
 ```env
 MODE=dev
-MONGO_URL=mongodb://127.0.0.1:27017/EcommerceC40
+MONGO_URL=mongodb://localhost:27017/Ecommerce-App
 BASE_URL=http://localhost:3000/
 ```
 
@@ -124,15 +108,3 @@ npm start
 - PATCH `/wishlist`: Add to wishlist (user).
 - DELETE `/wishlist`: Remove from wishlist (user).
 - GET `/wishlist`: Get all items in a user's wishlist.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and open a pull request with your features or fixes.
-
-## Licensing
-
-This project is licensed under the ISC License. See the LICENSE file for details.
-
-## Contact
-
-Questions or feedback? Contact me at abdelrahmanabdelkader2002@gmail.com
