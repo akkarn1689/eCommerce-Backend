@@ -8,7 +8,7 @@ const swaggerOptions = {
         info: {
             title: "Ecommerce Backend",
             version: "1.0.0",
-            description: "API documentation for your project",
+            description: "API documentation for eCommerce backend",
             contact: {
                 name: "Ashish",
                 email: "karnashish.dev@gmail.com",
