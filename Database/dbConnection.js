@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 
 export function dbConnection() {
+  const DB_URL = process.env.DB_URL || `mongodb://localhost:27017/Ecommerce-App`;
   mongoose
-    .connect(`mongodb://localhost:27017/Ecommerce-App`)
+    .connect(DB_URL)
     .then(() => {
       console.log("DB Connected Succesfully");
     })

@@ -7,7 +7,7 @@ import { orderModel } from "../../../Database/models/order.model.js";
 import Stripe from "stripe";
 import { userModel } from "../../../Database/models/user.model.js";
 const stripe = new Stripe(
-  process.env.STRIPE_SECRET_KEY,
+  "",
 );
 
 const createCashOrder = catchAsyncError(async (req, res, next) => {
