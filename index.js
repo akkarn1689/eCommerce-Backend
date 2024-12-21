@@ -1,4 +1,6 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 import { dbConnection } from "./Database/dbConnection.js";
 import { bootstrap } from "./src/bootstrap.js";
 import dotenv from "dotenv";
@@ -25,6 +27,14 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
     customCss: '.swagger-ui .topbar { display: none }',
     customSiteTitle: "Ecommerce API Documentation"
 }));
+
+// Define __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "views", "index.html"));
+});
 
 bootstrap(app);
 dbConnection();

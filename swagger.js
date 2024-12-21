@@ -10,13 +10,13 @@ const swaggerOptions = {
             version: "1.0.0",
             description: "API documentation for your project",
             contact: {
-                name: "GOAT Services",
-                email: "your_email@example.com",
+                name: "Ashish",
+                email: "karnashish.dev@gmail.com",
             },
         },
         servers: [
             {
-                url: "http://localhost:3000", // Replace with your server URL
+                url: "https://ecommerce-backend-ufc2.onrender.com/", // Replace with your server URL
             },
         ],
         components: {
